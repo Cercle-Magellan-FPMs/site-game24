@@ -50,6 +50,15 @@ export default {
           "0 1px 4px var(--tw-shadow-color), 0 4px 16px var(--tw-shadow-color)",
         ],
       },
+      animation: {
+        'infinite-scroll-right': 'scroll forwards 30s linear infinite',
+        'infinite-scroll-left': 'scroll reverse 30s linear infinite',
+      },
+      keyframes: {
+        "scroll": {
+          to: { transform: 'translate(calc(-50% - 0.5rem))' },
+        },
+      }
     },
   },
   plugins: [
