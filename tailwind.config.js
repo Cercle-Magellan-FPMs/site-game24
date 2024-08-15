@@ -51,14 +51,14 @@ export default {
         ],
       },
       animation: {
-        'infinite-scroll-right': 'scroll forwards 30s linear infinite',
-        'infinite-scroll-left': 'scroll reverse 30s linear infinite',
+        "infinite-scroll-right": "scroll forwards 30s linear infinite",
+        "infinite-scroll-left": "scroll reverse 30s linear infinite",
       },
       keyframes: {
-        "scroll": {
-          to: { transform: 'translate(calc(-50% - 0.5rem))' },
+        scroll: {
+          to: { transform: "translate(calc(-50% - 0.5rem))" },
         },
-      }
+      },
     },
   },
   plugins: [
@@ -69,7 +69,7 @@ export default {
             textShadow: value,
           }),
         },
-        { values: theme("textShadow") }
+        { values: theme("textShadow") },
       );
     }),
   ],

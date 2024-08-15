@@ -22,81 +22,79 @@ import FC24 from "@images/jeux/fc24.png";
 import SSBU from "@images/jeux/ssbu.png";
 import MK8 from "@images/jeux/mk8.png";
 
-
-
 const jeux = [
   {
     name: "League of Legends",
     image: LoL,
-    url: "/lol"
+    url: "/lol",
   },
   {
     name: "TrackMania",
     image: TM,
-    url: "/tm"
+    url: "/tm",
   },
   {
     name: "EA SPORTS™ FC 24",
     image: FC24,
-    url: "/fc24"
+    url: "/fc24",
   },
   {
     name: "Super Smash Bros. Ultimate",
     image: SSBU,
-    url: "/ssbu"
+    url: "/ssbu",
   },
   {
     name: "MarioKart 8",
     image: MK8,
-    url: "/mk8"
-  }
+    url: "/mk8",
+  },
 ];
 
 const sponsors = [
   {
     name: "Wavenet",
     url: "https://wavenet.be/",
-    image: Wavenet
+    image: Wavenet,
   },
   {
     name: "Weloveat",
     url: "https://weloveat.be/",
-    image: Weloveat
+    image: Weloveat,
   },
   {
     name: "Sopra Steria",
     url: "https://soprasteria.com/",
-    image: SopraSteria
+    image: SopraSteria,
   },
   {
     name: "YouFM",
     url: "https://youfm.be/",
-    image: YouFM
+    image: YouFM,
   },
   {
     name: "Walga",
     url: "https://www.walga.be/",
-    image: Walga
+    image: Walga,
   },
   {
     name: "Noctua",
     url: "https://noctua.at/fr/",
-    image: Noctua
+    image: Noctua,
   },
   {
     name: "Just One Byte",
     url: "https://j1b.be/",
-    image: JustOneByte
+    image: JustOneByte,
   },
   {
     name: "ORE",
     url: "https://www.facebook.com/ORE.UMONS/",
-    image: ORE
+    image: ORE,
   },
   {
     name: "Romeo pizza",
     url: "https://romeopizza.be/",
-    image: RomeoPizza
+    image: RomeoPizza,
   },
 ];
 ---
@@ -119,16 +117,16 @@ const sponsors = [
         <h1
           class="mx-auto w-[100%-3rem] max-w-4xl px-8 pe-16 text-4xl font-semibold text-white shadow-black text-shadow-title"
         >
-          Bienvenue au Game 24 !
+          Bienvenue au Game 24 !! 🎮
         </h1>
       </div>
     </section>
     <section
       class="mx-auto max-w-5xl space-y-2 rounded-2xl bg-white px-6 py-3 font-semibold"
     >
-      <h2 class=" text-5xl">Une date et un lieu !</h2>
-        <Image
-        class="drop-shadow-sm mx-auto"
+      <h2 class="text-5xl">Une date et un lieu !</h2>
+      <Image
+        class="mx-auto drop-shadow-sm"
         src={dateEtLieu}
         alt="Date et lieu du Game 24"
         quality={50}
@@ -139,11 +137,19 @@ const sponsors = [
       class="mx-auto max-w-5xl space-y-6 rounded-2xl bg-white px-6 py-3 font-semibold"
       id="tournois"
     >
-      <h2 class=" text-5xl">Des tournois</h2>
-      <div class="max-w-full overflow-hidden [-webkit-mask:linear-gradient(90deg,transparent,white_20%,white_80%,transparent)] [mask:linear-gradient(90deg,transparent,white_20%,white_80%,transparent)]">
-        <ul class="flex gap-4 w-max animate-infinite-scroll-left hover:[animation-play-state:paused]">
-          {[...jeux, ...jeux].map((jeu) => (
-              <a href={jeu.url} class="px-6 py-4 border-4 border-blue-600 rounded-2xl text-nowrap">
+      <h2 class="text-5xl">Des tournois</h2>
+      <div
+        class="max-w-full overflow-hidden [-webkit-mask:linear-gradient(90deg,transparent,white_20%,white_80%,transparent)] [mask:linear-gradient(90deg,transparent,white_20%,white_80%,transparent)]"
+      >
+        <ul
+          class="flex w-max animate-infinite-scroll-left gap-4 hover:[animation-play-state:paused]"
+        >
+          {
+            [...jeux, ...jeux].map((jeu) => (
+              <a
+                href={jeu.url}
+                class="text-nowrap rounded-2xl border-4 border-blue-600 px-6 py-4"
+              >
                 <Image
                   class="size-64 object-contain"
                   src={jeu.image}
@@ -153,7 +159,8 @@ const sponsors = [
                 />
                 {jeu.name}
               </a>
-          ))}
+            ))
+          }
         </ul>
       </div>
     </section>
@@ -161,22 +168,28 @@ const sponsors = [
       class="mx-auto max-w-5xl space-y-2 rounded-2xl bg-white px-6 py-3 font-semibold"
       id="sponsors"
     >
-      <h2 class=" text-5xl">Nos sponsors</h2>
-      <div class="max-w-full overflow-hidden [-webkit-mask:linear-gradient(90deg,transparent,white_20%,white_80%,transparent)] [mask:linear-gradient(90deg,transparent,white_20%,white_80%,transparent)]">
-        <ul class="flex gap-4 w-max animate-infinite-scroll-right hover:[animation-play-state:paused]">
-          {[...sponsors, ...sponsors].map((sponsor) => (
-            <li>
-              <a href={sponsor.url} target="_blank" class="rounded-2xl">
-                <Image
-                  class="size-64 object-contain"
-                  src={sponsor.image}
-                  alt={sponsor.name}
-                  quality={50}
-                  format="webp"
-                />
-              </a>
-            </li>
-          ))}
+      <h2 class="text-5xl">Nos sponsors</h2>
+      <div
+        class="max-w-full overflow-hidden [-webkit-mask:linear-gradient(90deg,transparent,white_20%,white_80%,transparent)] [mask:linear-gradient(90deg,transparent,white_20%,white_80%,transparent)]"
+      >
+        <ul
+          class="flex w-max animate-infinite-scroll-right gap-4 hover:[animation-play-state:paused]"
+        >
+          {
+            [...sponsors, ...sponsors].map((sponsor) => (
+              <li>
+                <a href={sponsor.url} target="_blank" class="rounded-2xl">
+                  <Image
+                    class="size-64 object-contain"
+                    src={sponsor.image}
+                    alt={sponsor.name}
+                    quality={50}
+                    format="webp"
+                  />
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </div>
     </section>
